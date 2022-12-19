@@ -100,7 +100,7 @@ body {
 }
 
 .container {
-    max-width: 343px;
+    width: 343px;
     height: 611px;
     border-radius: 10px;
     display: flex;
@@ -189,4 +189,50 @@ body {
     border: none;
     border-radius: 8px;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 600px;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .desktop-image {
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        max-width: 300px;
+    }
+
+    .content {
+        padding: 32px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content > p:nth-child(1) {
+        font-size: 12px;
+        line-height: 14.63px;
+        margin-bottom: 20px;
+    }
+
+    .content > p:nth-child(3) {
+        font-size: var(--font-size);
+    }
+
+    .submit-btn {
+        min-width: 236px;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--very-dark-blue);
+    }
 }
